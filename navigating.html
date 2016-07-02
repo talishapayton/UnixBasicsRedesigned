@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <title>Home</title>
+	<link rel = "stylesheet" type= "text/css" href= "styles.css"/>
+	<script type="text/javascript">
+		function mouseOver( choose ) {
+			choose.style.color = "#ff9900";
+			choose.style.cursor = "pointer";
+		}
+
+		function mouseOut( choose ) {
+			choose.style.color = "black";
+			choose.style.cursor = "default";
+			
+		}
+
+		function makeVisible( divID ) {
+		  document.getElementById( "chunk1" ).style.visibility = "hidden";
+		  document.getElementById( "chunk2" ).style.visibility = "hidden";
+		  document.getElementById( "chunk3" ).style.visibility = "hidden";
+		  document.getElementById( "chunk4" ).style.visibility = "hidden";
+		  document.getElementById( "chunk5" ).style.visibility = "hidden";
+		  document.getElementById( "chunk6" ).style.visibility = "hidden";
+		  document.getElementById( divID ).style.visibility = "visible";
+		}
+	</script>
+	<style type ="text/css">
+	body{
+		min-width: 1300px;	
+}
+	</style>
+	
+</head>
+
+<body>
+
+		<div id ="nav">
+
+				<ul>
+					<li><a href ="navigating.html">NAVIGATING</a></li>
+					<li><a href ="fileHandling.html">FILE HANDLING</li>
+						<li id ="image"><a href ="index.html"><img src = "home3.png"/></a></li>
+					<li><a href ="accessRights.html">ACCESS RIGHTS</a></li>
+					<li><a href ="moreCommands.html">MORE COMMANDS</a></li>
+				</ul>	
+		</div>
+		
+		
+		<div id ="content">
+				<h2>Navigating</h2>
+		
+				<div id ="secondNav">
+				
+					<ul>
+						<li><span onclick="makeVisible( 'chunk1' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">Viewing Directories</span></li>
+						<li><span onclick="makeVisible( 'chunk2' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">Creating Directories</span></li>
+						<li><span onclick="makeVisible( 'chunk3' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">Changing Directories</span></li>
+						<li><span onclick="makeVisible( 'chunk4' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">Navigating Files</span></li>
+						<li><span onclick="makeVisible( 'chunk5' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">Current Directory</span></li>
+						<li><span onclick="makeVisible( 'chunk6' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">Getting Home</span></li>
+					</ul>
+					
+				</div>
+				
+	
+				
+					<div id="chunk1" style="visibility:visible">
+						<div id = "contentTitle">Viewing Directories</div>
+					
+						<p>
+						   To find out what files are in your current working directory type the following command:
+						<br/><code>ls</code><br/>
+						However, it is important to note that this does not list hidden files that begin with a dot (.)
+						To list all files including the hidden files you need to add a parameter to the command.
+						You would type the following followed by pressing the return key
+						<br/><code>ls-a</code><br/>
+						</p> 
+					</div>
+
+					
+					<div id="chunk2" style="visibility:hidden">
+						<div id = "contentTitle">MKDIR</div>
+						<p>
+							  To make a new directory (folder) type the following command 
+							  followed by what you want the directory to be named
+							<br/><code> mkdir  filename </code><br/>
+							After you press the return key, it will show no signs of having made the file,
+							therefore do a quick ls and that directory should be there.
+						</p>
+					</div>
+					
+					<div id="chunk3" style="visibility:hidden">
+							<div id = "contentTitle">
+							Changing Directories
+							</div>
+							<p>
+							  To change to a different directory use the following command followed by the name of the
+							  directory that you wish to go to. However, note that this simple command only works if the directory is within your current directory:
+							<br/><code> cd filename </code><br/>
+							Typing cd without any filename will always take you back to the home directory. 
+							This is the go-to command is you ever get lost.
+							</p>  
+					</div>
+					
+					<div id="chunk4" style="visibility:hidden">
+							<div id = "contentTitle">
+							Navigating Files
+							</div>
+			
+							<p>
+							  To navigate through directories and get to directories that are not within 
+							  your current working directory you will have to use the command cd with parameters such as the following:
+								<br/><code> cd . </code><br/>
+								and
+								<br/><code> cd .. </code><br/>
+
+								 The (.) in unix means the current directory
+								The (..) in unix means the parent of the current directory so this will 
+								take you up one level  in the file systems hierarchy.  
+							</p>  
+					</div>
+					
+					<div id="chunk5" style="visibility:hidden">
+						<div id = "contentTitle">
+						Current Directory
+						</div>
+						<p>
+						When using unix the first few times you may find yourself lost. 
+						In order to figure out where you are in the system you will need to
+						find out your current working directory. To print the current working
+						directory type the following command:
+						<br/><code> pwd</code><br/>
+						 Your full pathname should then appear
+						</p>
+					</div>
+					
+					
+					<div id="chunk6" style="visibility:hidden">
+						<div id = "contentTitle">
+							Getting Home
+						</div>				
+						<p>
+							Another character which represents the home directory is the tilde(~) character. 
+							For example you can use it in the following way
+							<br/><code> ls  ~/anydirectoryname</code><br/>
+							It specifies paths starting at your home directory so you don’t have to list
+							all the folders in between the home directory and that folder 
+						</p> 
+						
+					</div>
+			
+		
+
+		</div>	
+			
+    
+	<div id ="footer">
+        
+		<div id= "links">
+			<a href="about.html">About This Site</a> |
+			<a href="http://people.rit.edu/tep7927/409">409 Home</a>
+			<p>Site Designed by: Talisha Payton RIT 13'</p>
+		</div>
+    </div>
+
+
+</body>
+</html>

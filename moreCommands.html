@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <title>Home</title>
+
+	<link rel = "stylesheet" type= "text/css" href= "styles.css"/>
+	<script type="text/javascript">
+		function mouseOver( choose ) {
+			choose.style.color = "#ffff00";
+			choose.style.cursor = "pointer";
+		}
+
+		function mouseOut( choose ) {
+			choose.style.background = "black";
+			choose.style.cursor = "default";
+			
+		}
+
+		function makeVisible( divID ) {
+		  document.getElementById( "chunk1" ).style.visibility = "hidden";
+		  document.getElementById( "chunk2" ).style.visibility = "hidden";
+		  document.getElementById( "chunk3" ).style.visibility = "hidden";
+		  document.getElementById( "chunk4" ).style.visibility = "hidden";
+		  document.getElementById( "chunk5" ).style.visibility = "hidden";
+		  document.getElementById( "chunk6" ).style.visibility = "hidden";
+		  document.getElementById( divID ).style.visibility = "visible";
+		}
+	</script>
+		<style type ="text/css">
+	#chunk1{
+	margin-left: 30px;
+	margin-right: 1000px;
+	margin-top: -50px;
+	width: 55%;
+	position:absolute;
+	visiblity:hidden;
+	
+}
+
+
+	</style>
+</head>
+
+<body>
+
+		<div id ="nav">
+
+				<ul>
+					<li><a href ="navigating.html">NAVIGATING</a></li>
+					<li><a href ="fileHandling.html">FILE HANDLING</li>
+						<li id ="image"><a href ="index.html"><img src = "home3.png"/></a></li>
+					<li><a href ="accessRights.html">ACCESS RIGHTS</a></li>
+					<li><a href ="moreCommands.html">MORE COMMANDS</a></li>
+				</ul>	
+		</div>
+		
+		<h2>More Commands</h2>
+		
+		<div id ="content">
+			<div id="chunk1" style="visibility:visible">
+				<div id = "contentTitle">
+				</div>
+				
+				<p>
+					<br/><code> Touch </code><br/>
+					creates a blank files
+
+					<br/><br/><code> cat </code><br/>
+					Prints files to input, or reads and returns input.
+
+					<br/><br/><code>chown </code><br/>
+
+					Changes ownership of files and directories
+
+					<br/><br/><code>date</code><br/>
+					Displays or sets the current date and time.
+
+					<br/><br/><code>diff </code><br/>
+					Shows differences between files.
+
+					<br/><br/><code>exit </code><br/>
+					Ends a process, and returns to the parent process.
+
+					<br/><br/><code>find </code><br/>
+					Searches for files.
+
+					<br/><br/><code>finger</code><br/>
+
+					Looks up user information.
+
+					<br/><br/><code>grep</code><br/>
+					Look for lines which match a given string or regular expression.
+
+					<br/><br/><code>head</code><br/>
+					Prints the first few lines of a file.
+
+					<br/><br/><code>kill</code><br/>
+					Terminates a process by PID.
+
+					<br/><br/><code>less</code><br/>
+					Displays the content of a file.
+
+					<br/><br/><code>lprm</code><br/>
+
+					Removes printer queue requests.
+
+					<br/><br/><code>man</code><br/>
+					Displays the manual page for a program.
+
+					<br/><br/><code>more</code><br/>
+					Prints the contents of files.
+
+					<br/><br/><code>passwd</code><br/>
+					Creates or changes passwords.
+
+					<br/><br/><code>ps</code><br/>
+					Gives a list of all active processes, along with other information.
+
+					<br/><br/><code>rlogin</code><br/>
+
+					Logs into remote systems
+
+					<br/><br/><code>su</code><br/>
+					Logs in as another user.
+
+					<br/><br/><code>tail</code><br/>
+					Prints the last few lines of a file.
+
+					<br/><br/><code>telnet</code><br/>
+					Communicates with other hosts via the telnet protocol.
+
+					<br/><br/><code>who</code><br/>
+					Gives a list of logged in users.
+				</p>  
+			</div>
+		</div>
+		
+			
+			
+    
+	
+
+
+</body>
+</html>

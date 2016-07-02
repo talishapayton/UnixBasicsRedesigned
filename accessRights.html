@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <title>Home</title>
+	<link rel = "stylesheet" type= "text/css" href= "styles.css"/>
+	<script type="text/javascript">
+		function mouseOver( choose ) {
+			choose.style.color = "#E8BF02";
+			choose.style.cursor = "pointer";
+		}
+
+		function mouseOut( choose ) {
+			choose.style.color = "black";
+			choose.style.cursor = "default";
+			
+		}
+
+		function makeVisible( divID ) {
+		  document.getElementById( "chunk1" ).style.visibility = "hidden";
+		  document.getElementById( "chunk2" ).style.visibility = "hidden";
+		  document.getElementById( "chunk3" ).style.visibility = "hidden";
+		  document.getElementById( divID ).style.visibility = "visible";
+		}
+	</script>
+	
+</head>
+
+<body>
+
+		<div id ="nav">
+
+				<ul>
+					<li><a href ="navigating.html">NAVIGATING</a></li>
+					<li><a href ="fileHandling.html">FILE HANDLING</li>
+						<li id ="image"><a href ="index.html"><img src = "home3.png"/></a></li>
+					<li><a href ="accessRights.html">ACCESS RIGHTS</a></li>
+					<li><a href ="moreCommands.html">MORE COMMANDS</a></li>
+				</ul>	
+		</div>
+		
+		
+		<div id ="content">
+			<h2>Access Rights</h2>
+			
+				<div id ="secondNav">
+					<ul>
+						<li><span onclick="makeVisible( 'chunk1' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">Permissions</span></li>
+						<li><span onclick="makeVisible( 'chunk2' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">View Permissions</span></li>
+						<li><span onclick="makeVisible( 'chunk3' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">Modify Permissions</span></li>
+					</ul>	
+				</div>
+				
+				<div id="chunk1" style="visibility:visible">
+						<div id = "contentTitle">
+						Permissions
+						</div>
+				
+							<p>
+							 The three options for the access rights of file and directories (d) are read (r), write (w) and execute (x).  An example of how they appear in unix as follows: 
+								<br/><code> drwxrw-r-- 5 j f 50 Feb 03 1998 Desktop</code><br/>  
+								<code>-rwxrw-r-- 5 j f 10 Mar 31 2003 Documents </code><br/>
+								Directories are indicated with a (d). The permissions are in groups of three
+							</p> 
+
+					</div>
+						 
+	
+					<div id="chunk2" style="visibility:hidden">
+						<div id = "contentTitle">
+						View Permissions
+						</div>
+				
+						<p>
+						To see the access rights of any of the files in a directory use the ls command. This time however you must add a special parameter like so:
+						<br/><code> ls -l </code><br/>
+						The l in this command stands for long listing. 
+						</p>  
+					</div>
+					
+					<div id="chunk3" style="visibility:hidden">
+						<div id = "contentTitle">
+						Modify Permissions
+						</div>
+						<p>
+						If you are the owner of a file or directory you have the ability to alter a files permission settings.
+						The command used is:
+						<br/><code> chmod </code><br/>
+						You also have the option to add permissions(+), take away permissions(-) from any of three groups. User(u), group(g), other(o). 
+						An example command looks as follows:
+						<br/><code> chmod go-rwx mysongs </code><br/>
+						This code is taking away the read, write and execute permissions from the person whom the file belongs and all others for the file called Mysongs.
+						</p>  
+
+					</div>
+					
+					
+		</div>
+		
+			
+			
+    
+	<div id ="footer">
+        
+		<div id= "links">
+			<a href="about.html">About This Site</a> |
+			<a href="http://people.rit.edu/tep7927/409">409 Home</a>
+			<p>Site Designed by: Talisha Payton RIT 13'</p>
+		</div>
+    </div>
+
+
+</body>
+</html>

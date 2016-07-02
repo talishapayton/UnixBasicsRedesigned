@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <title>Home</title>
+	<link rel = "stylesheet" type= "text/css" href= "styles.css"/>
+	<script type="text/javascript">
+		function mouseOver( choose ) {
+			choose.style.color = "#ff9900";
+			choose.style.cursor = "pointer";
+		}
+
+		function mouseOut( choose ) {
+			choose.style.color = "black";
+			choose.style.cursor = "default";
+			
+		}
+
+		function makeVisible( divID ) {
+		  document.getElementById( "chunk1" ).style.visibility = "hidden";
+		  document.getElementById( "chunk2" ).style.visibility = "hidden";
+		  document.getElementById( "chunk3" ).style.visibility = "hidden";
+		  document.getElementById( "chunk4" ).style.visibility = "hidden";
+		  document.getElementById( divID ).style.visibility = "visible";
+		}
+	</script>
+
+	
+</head>
+
+<body>
+
+		<div id ="nav">
+
+				<ul>
+					<li><a href ="navigating.html">NAVIGATING</a></li>
+					<li><a href ="fileHandling.html">FILE HANDLING</li>
+						<li id ="image"><a href ="index.html"><img src = "home3.png"/></a></li>
+					<li><a href ="accessRights.html">ACCESS RIGHTS</a></li>
+					<li><a href ="moreCommands.html">MORE COMMANDS</a></li>
+				</ul>	
+		</div>
+		
+		
+		<div id ="content">
+				<h2>File Handling</h2>
+		
+				<div id ="secondNav">
+				
+					<ul>
+						<li><span onclick="makeVisible( 'chunk1' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">Copying Files</span></li>
+						<li><span onclick="makeVisible( 'chunk2' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">Moving Files</span></li>
+						<li><span onclick="makeVisible( 'chunk3' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">Removing Files</span></li>
+						<li><span onclick="makeVisible( 'chunk4' );" onmouseover="mouseOver( this );" onmouseout="mouseOut( this );">Clear Screen</span></li>
+					</ul>
+					
+				</div>
+				
+	
+				
+					<div id="chunk1" style="visibility:visible">
+						<div id = "contentTitle">
+						Copying Files
+						</div>
+						<p>
+						  In order to make a copy of a file the command is simple:
+							<br/><code> cp file1 file2</code><br/>
+							This command makes a copy of file1 and gives it the name of file 2. 
+							This must be done in order. The new file will appear in your current
+							working directory. You can then move or modify it however you wish.
+						</p>  
+
+					</div>
+						 
+	
+					<div id="chunk2" style="visibility:hidden">
+						<div id = "contentTitle">
+						Moving Files
+						</div>
+						<p>
+						  To move a file to a different directory just use the move command followed by the pathname of the directory where you would like to move it to like so:
+							<br/><code> mv filename exampledirectory/another/ </code><br/>
+							the move command also serves the purpose of renaming files.  The
+							command
+							<br/><code> mv file1 file2 </code><br/> will rename file1 to file2 
+						</p> 
+					</div>
+					
+					<div id="chunk3" style="visibility:hidden">
+						<div id = "contentTitle">
+						Removing Files
+						</div>
+						<p>
+						 To remove a file use the remove command followed the name of the file 
+						 you would like to delete. For example: 
+						<br/><code> rm filename </code><br/>
+						</p>  
+					</div>
+					
+					<div id="chunk4" style="visibility:hidden">
+						<div id = "contentTitle">
+						Clear Screen
+						</div>
+						<p>
+						 When working in unix you will quickly fill your window with commands 
+						 and results which can confuse you or just be in the way. To clear the
+						 screen use the following command:
+						<br/><code> clear </code><br/>
+						</p> 
+					</div>
+					
+			
+		
+
+		</div>	
+		
+			
+			
+    
+	<div id ="footer">
+        
+		<div id= "links">
+			<a href="about.html">About This Site</a> |
+			<a href="http://people.rit.edu/tep7927/409">409 Home</a>
+			<p>Site Designed by: Talisha Payton RIT 13'</p>
+		</div>
+    </div>
+
+
+</body>
+</html>
